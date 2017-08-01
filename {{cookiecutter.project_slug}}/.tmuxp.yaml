@@ -1,0 +1,15 @@
+session_name: {{cookiecutter.project_name}}
+start_directory: ./
+windows:
+  - window_name: Git/BPython
+    layout: main-vertical
+    panes:
+      - shell_command:
+        - git status .
+        focus: true
+      - shell_command:
+        - make shell
+  - window_name: vim
+    panes:
+      - shell_command:
+        - vim .
