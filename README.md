@@ -37,4 +37,8 @@ When you run that, cookiecutter will ask you some questions, and then generate a
 
 When the development environment launches, you will be in a `tmux` session with two windows. Window 1 will have two panes containing a command line and a [BPython](https://bpython-interpreter.org/) session. Window 2 will have a vim session.
 
+![tmux window 1](tmux1.png "tmux window 1")
+
+![tmux window 2](tmux2.png "tmux window 2")
+
 To start up the development environment again, just run `make start` from the command line in the project directory.
