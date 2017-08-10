@@ -14,6 +14,9 @@ shell: deps
 start: deps
 	$(ENV)/bin/tmuxp load .
 
+test: deps
+	$(PYTHON) -m unittest
+
 clean:
 	rm -rf env
 

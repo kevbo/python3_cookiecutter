@@ -5,6 +5,7 @@ windows:
     layout: main-vertical
     panes:
       - shell_command:
+        - make test
         - git status .
         focus: true
       - shell_command:
