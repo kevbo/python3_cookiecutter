@@ -1,5 +1,7 @@
 PYTHON = $(ENV)/bin/python3
 ENV = $(CURDIR)/env
+COVERAGE = $(ENV)/bin/coverage
+
 
 env:
 	python3 -m venv $(ENV)
@@ -16,6 +18,11 @@ start: deps
 
 test: deps
 	$(PYTHON) -m unittest
+
+coverage: deps
+	$(COVERAGE) erase
+	$(COVERAGE) run --omit test* -m unittest
+	$(COVERAGE) report
 
 clean:
 	rm -rf env
