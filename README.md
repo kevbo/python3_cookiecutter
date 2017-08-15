@@ -8,6 +8,7 @@ Prerequisites
 -------------
 * A copy of Python 3 on your path (ideally with [pyenv](https://github.com/pyenv/pyenv) installed)
 * [tmux](https://github.com/tmux/tmux/wiki) (if you want to use my development environment)
+* [vim](http://www.vim.org/) (Again, only if you want to use my development environment)
 * [Cookiecutter](https://github.com/audreyr/cookiecutter)
 
 
