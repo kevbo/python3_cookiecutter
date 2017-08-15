@@ -3,6 +3,14 @@ Kevbo's Python 3 Cookiecutter Template
 
 This is a custom [cookiecutter](https://github.com/audreyr/cookiecutter) template that I use to bootstrap simple projects in Python 3. It includes a layout that represents my desired development environment (`vim`, `tmux`) and its usual artifacts (a README, a Makefile, a requirements file, etc.)
 
+
+Prerequisites
+-------------
+* A copy of Python 3 on your path (ideally with [pyenv](https://github.com/pyenv/pyenv) installed)
+* [tmux](https://github.com/tmux/tmux/wiki) (if you want to use my development environment)
+* [Cookiecutter](https://github.com/audreyr/cookiecutter)
+
+
 To use
 ------
 
@@ -12,7 +20,7 @@ First, you'll want to make sure you've got [cookiecutter](https://github.com/aud
     alias bp='/Users/kboers/src/bpython/env/bin/bpython'
     alias cookiecutter='/Users/kboers/src/cookiecutter/env/bin/cookiecutter'
 
-Next, because this project uses a `.python-version` file, you may want to install [pyenv](https://github.com/pyenv/pyenv) for managing multiple versions of Python on your system. It's not strictly required, as the Makefile will use whatever version of Python 3 is found on your path. Otherwise, `pyenv` will read the desired version from `.python-version` and then use that version (assuming you have it installed -- if not, it will ask you to install it).
+Next, because this project uses a `.python-version` file, you may want to install [pyenv](https://github.com/pyenv/pyenv) for managing multiple versions of Python on your system. It's not strictly required, as the Makefile will use whatever version of Python 3 is found on your path. Otherwise, `pyenv` will read the desired version from `.python-version` and then use that version (assuming you have it installed -- if not, pyenv will ask you to install it).
 
 Now you should be able to run `cookiecutter` and pass it a string representing this GitHub repo:
 
