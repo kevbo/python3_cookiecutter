@@ -24,7 +24,10 @@ coverage: deps
 	$(COVERAGE) run --omit test* -m unittest
 	$(COVERAGE) report
 
+pep8:
+	$(ENV)/bin/pep8 *.py
+
 clean:
 	rm -rf env
 
-.PHONY: deps shell start clean
+.PHONY: deps shell start clean test coverage pep8

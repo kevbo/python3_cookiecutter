@@ -6,6 +6,7 @@ windows:
     panes:
       - shell_command:
         - make coverage
+        - make pep8
         - git status .
         focus: true
       - shell_command:
