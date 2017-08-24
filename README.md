@@ -38,13 +38,16 @@ When you run that, cookiecutter will ask you some questions, and then generate a
     project_name [The name of the project]: My Fancy Module
     project_slug [my_fancy_module]: 
     module_name [Module name, minus the .py]: fancy
+    python_version [3.6.2]: 
+    start_development_environment_after_creation [Yes]: 
+    Project created in ./my_fancy_module!
     Starting development environment...
     python3 -m venv /Users/kboers/src/my_fancy_module/env
         <Dependencies from requirements.txt are installed>
     /Users/kboers/src/my_fancy_module/env/bin/tmuxp load .
     [Loading] /Users/kboers/src/my_fancy_module/.tmuxp.yaml
 
-When the development environment launches, you will be in a `tmux` session with two windows. Window 1 will have two panes containing a command line and a [BPython](https://bpython-interpreter.org/) session. Window 2 will have a vim session.
+If you chose the default option to start the development environment, you will need `vim` and `tmux` installed. When the development environment launches, you will be in a `tmux` session with two windows. Window 1 will have two panes containing a command line and a [BPython](https://bpython-interpreter.org/) session. Window 2 will have a vim session.
 
 ![tmux window 1](tmux1.png "tmux window 1")
 
