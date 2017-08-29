@@ -27,7 +27,10 @@ coverage: deps
 pep8:
 	$(ENV)/bin/pep8 *.py
 
+outdated:
+	$(ENV)/bin/pip list --outdated
+
 clean:
 	rm -rf env
 
-.PHONY: deps shell start clean test coverage pep8
+.PHONY: deps shell start clean test coverage pep8 outdated
