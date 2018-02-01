@@ -5,8 +5,7 @@ windows:
     layout: main-vertical
     panes:
       - shell_command:
-        - make coverage
-        - make pep8
+        - make test
         - make outdated
         - git init
         - git status .
