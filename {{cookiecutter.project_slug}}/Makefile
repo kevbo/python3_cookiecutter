@@ -6,13 +6,13 @@ COVERAGE = $(ENV)/bin/coverage
 deps:
 	pipenv install --dev
 
-shell: deps
+shell:
 	pipenv run bpython
 
 start: deps
 	pipenv run tmuxp load .
 
-test: deps
+test:
 	pipenv run coverage run -m unittest
 	pipenv run coverage report -m
 	pipenv run coverage xml
@@ -23,7 +23,7 @@ ci-install:
 	pip install pipenv
 	pipenv install --dev --ignore-pipfile
 
-outdated: deps
+outdated:
 	pipenv run pip list --outdated
 
 clean:
