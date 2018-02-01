@@ -6,11 +6,11 @@ name = "pypi"
 
 
 [dev-packages]
-bpython
-tmuxp
-coverage
-pep8
-jupyter
+bpython = "*"
+tmuxp = "*"
+coverage = "*"
+pep8 = "*"
+jupyter = "*"
 
 
 [packages]
