@@ -6,7 +6,7 @@ This is a custom [cookiecutter](https://github.com/audreyr/cookiecutter) templat
 
 Prerequisites
 -------------
-* A copy of Python 3 on your path (ideally with [pyenv](https://github.com/pyenv/pyenv) installed)
+* Recent copies of [pyenv](https://github.com/pyenv/pyenv) and [pipenv](https://github.com/pypa/pipenv) installed and on your PATH
 * [tmux](https://github.com/tmux/tmux/wiki) (if you want to use my development environment)
 * [vim](http://www.vim.org/) (Again, only if you want to use my development environment)
 * [Cookiecutter](https://github.com/audreyr/cookiecutter)
@@ -21,7 +21,9 @@ First, you'll want to make sure you've got [cookiecutter](https://github.com/aud
     alias bp='/Users/kboers/src/bpython/env/bin/bpython'
     alias cookiecutter='/Users/kboers/src/cookiecutter/env/bin/cookiecutter'
 
-Next, because this project uses a `.python-version` file, you may want to install [pyenv](https://github.com/pyenv/pyenv) for managing multiple versions of Python on your system. It's not strictly required, as the Makefile will use whatever version of Python 3 is found on your path. Otherwise, `pyenv` will read the desired version from `.python-version` and then use that version (assuming you have it installed -- if not, pyenv will ask you to install it).
+You may also be interested in [pipsi](https://github.com/mitsuhiko/pipsi), which I think does the same thing.
+
+Next, because this project specifies a Python major version in its `Pipfile`, you'll need to install [pyenv](https://github.com/pyenv/pyenv) for managing multiple versions of Python on your system. `pipenv` will read the desired version from `Pipfile` and then use that version (assuming you have it installed -- if not, pyenv will ask you to install it).
 
 Now you should be able to run `cookiecutter` and pass it a string representing this GitHub repo:
 
@@ -38,7 +40,6 @@ When you run that, cookiecutter will ask you some questions, and then generate a
     project_name [The name of the project]: My Fancy Module
     project_slug [my_fancy_module]: 
     module_name [Module name, minus the .py]: fancy
-    python_version [3.6.2]: 
     start_development_environment_after_creation [Yes]: 
     Project created in ./my_fancy_module!
     Starting development environment...
