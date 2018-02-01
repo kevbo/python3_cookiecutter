@@ -3,34 +3,31 @@ ENV = $(CURDIR)/env
 COVERAGE = $(ENV)/bin/coverage
 
 
-env:
-	python3 -m venv $(ENV)
-
-deps: env
-	$(ENV)/bin/pip install -U pip setuptools
-	$(ENV)/bin/pip install -r requirements.txt
+deps:
+	pipenv install --dev
 
 shell: deps
-	$(ENV)/bin/bpython
+	pipenv run bpython
 
 start: deps
-	$(ENV)/bin/tmuxp load .
+	pipenv run tmuxp load .
 
 test: deps
+	pipenv run coverage run -m unittest
+	pipenv run coverage report -m
+	pipenv run coverage xml
+	pipenv check
+	pipenv check --style *.py
 	$(PYTHON) -m unittest
 
-coverage: deps
-	$(COVERAGE) erase
-	$(COVERAGE) run --omit test* -m unittest
-	$(COVERAGE) report
-
-pep8:
-	$(ENV)/bin/pep8 *.py
+ci-install:
+	pip install pipenv
+	pipenv install --dev --ignore-pipfile
 
 outdated:
-	$(ENV)/bin/pip list --outdated
+	pipenv run pip list --outdated
 
 clean:
-	rm -rf env
+	pipenv --rm
 
 .PHONY: deps shell start clean test coverage pep8 outdated

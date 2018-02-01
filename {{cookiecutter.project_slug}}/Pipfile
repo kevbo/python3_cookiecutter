@@ -1,0 +1,23 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+bpython
+tmuxp
+coverage
+pep8
+jupyter
+
+
+[packages]
+
+
+
+[requires]
+
+python_version = "{{ cookiecutter.python_version }}"
+
