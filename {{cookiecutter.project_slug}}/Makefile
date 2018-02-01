@@ -18,13 +18,12 @@ test: deps
 	pipenv run coverage xml
 	pipenv check
 	pipenv check --style *.py
-	$(PYTHON) -m unittest
 
 ci-install:
 	pip install pipenv
 	pipenv install --dev --ignore-pipfile
 
-outdated:
+outdated: deps
 	pipenv run pip list --outdated
 
 clean:
