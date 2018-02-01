@@ -1,5 +1,0 @@
-bpython
-tmuxp
-coverage
-pep8
-jupyter
