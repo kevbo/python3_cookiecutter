@@ -13,6 +13,7 @@ start: deps
 	pipenv run tmuxp load .
 
 test:
+	pipenv run coverage erase
 	pipenv run coverage run -m unittest
 	pipenv run coverage report -m
 	pipenv run coverage xml
