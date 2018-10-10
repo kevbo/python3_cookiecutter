@@ -1,6 +1,4 @@
 PYTHON = $(ENV)/bin/python3
-ENV = $(CURDIR)/env
-COVERAGE = $(ENV)/bin/coverage
 
 
 deps:
