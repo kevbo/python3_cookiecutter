@@ -22,10 +22,13 @@ ci-install:
 	pip install pipenv
 	pipenv install --dev --ignore-pipfile
 
-outdated:
+outdated: deps
 	pipenv run pip list --outdated
+
+black-diff: deps
+	pipenv run black --diff .
 
 clean:
 	pipenv --rm
 
-.PHONY: deps shell start clean test coverage pep8 outdated
+.PHONY: deps shell start clean test coverage pep8 outdated black-diff
