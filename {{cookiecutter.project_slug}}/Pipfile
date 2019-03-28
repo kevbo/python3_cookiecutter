@@ -11,6 +11,7 @@ tmuxp = "*"
 coverage = "*"
 pep8 = "*"
 jupyter = "*"
+black = "*"
 
 
 [packages]
@@ -19,5 +20,5 @@ jupyter = "*"
 
 [requires]
 
-python_version = "3.6"
+python_version = "3.7"
 
